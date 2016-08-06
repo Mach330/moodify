@@ -2,6 +2,10 @@
 <html>
     <head>
         <title>Moodify</title>
+        <!--Boostrap's CSS-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
         <div class="container" id="page-container">
@@ -13,6 +17,9 @@
             <h2 id="page-header">
                 Get song recommendations based on your mood.
             </h2>
+            <img id="selected-img" src="">
+            <h4 id="track-name"></h4>
+
             <div class="btn-wrapper">
                 <label class="btn btn-info" for="my-file-selector">
                     <input id="my-file-selector" type="file">
@@ -20,6 +27,7 @@
                 </label>
                 <button type="button" class="btn btn-info" id="refreshbtn">Another song please</button>
             </div>
+            <div id="musicplayer"></div>
         </div>
         <!-- 
             NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
@@ -28,10 +36,14 @@
 
             Alternatively can use CDNs for bootstrap/jquery
         -->
-        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!--jQuery Script-->
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./js/basic.js"></script>
+        <!--Bootstrap Script-->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--SoundCloud SDK-->
+        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+        <!--Custom Script-->
+        <script src="./js/main.js"></script>
     </body>
 </html>
